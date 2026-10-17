@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>HydroMinds #38992 · Echipa de robotică FTC</title>
+    <meta
+      name="description"
+      content="HydroMinds #38992: echipă de robotică FIRST Tech Challenge din s. Dubăsarii Vechi, r. Criuleni. Proiecte, realizări, echipa și oportunități de sponsorizare."
+    />
+    <meta name="theme-color" content="#071233" />
+    <link rel="icon" href="assets/logo.webp" type="image/webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- 3D scene (three.js): particle water drop with the logo inside + wave field -->
+    <canvas class="scene" aria-hidden="true"></canvas>
+    <div class="scene-shade" aria-hidden="true"></div>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <a class="logo" href="#acasa" aria-label="HydroMinds, acasă">
+        <img src="assets/logo.webp" alt="" width="52" height="52" />
+      </a>
+
+      <nav class="nav" aria-label="Navigare principală">
+        <a class="nav-link is-active" href="#acasa">Acasă</a>
+        <a class="nav-link" href="#despre">Despre</a>
+        <a class="nav-link" href="#proiecte">Proiecte</a>
+        <a class="nav-link" href="#echipa">Echipa</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <a class="sign-in" href="#sponsori">Sponsorizează</a>
+
+      <button class="burger" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="menu-overlay" hidden></div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Meniu mobil" hidden>
+      <a class="m-link is-active" href="#acasa" style="--i: 0">Acasă</a>
+      <a class="m-link" href="#despre" style="--i: 1">Despre</a>
+      <a class="m-link" href="#proiecte" style="--i: 2">Proiecte</a>
+      <a class="m-link" href="#echipa" style="--i: 3">Echipa</a>
+      <a class="m-link" href="#contact" style="--i: 4">Contact</a>
+      <a class="m-sign-in" href="#sponsori" style="--i: 5">Sponsorizează</a>
+    </nav>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="hero" id="acasa">
+        <div class="hero-copy">
+          <p class="kicker anim" style="--d: 0.05s">FIRST Tech Challenge · Echipa #38992</p>
+
+          <h1 class="headline">
+            <span class="line l1">HydroMinds</span>
+            <span class="line l2">De la LEGO, la metal</span>
+          </h1>
+
+          <p class="subhead anim" style="--d: 0.28s">
+            O echipă inovatoare, dedicată pasiunii pentru tehnologie, comunitate și excelență. După 3 ani în FIRST LEGO
+            League, intrăm în universul FIRST Tech Challenge.
+          </p>
+
+          <div class="hero-ctas anim" style="--d: 0.4s">
+            <a class="cta" href="#sponsori">Devino partener</a>
+            <a class="link-arrow" href="#echipa">Cunoaște echipa</a>
+          </div>
+        </div>
+
+        <dl class="stats">
+          <div class="stat anim" style="--d: 0.5s">
+            <dt class="stat-value" data-target="3" data-suffix="">0</dt>
+            <dd>ani în Finala Națională FLL</dd>
+          </div>
+          <div class="stat anim" style="--d: 0.58s">
+            <dt class="stat-value" data-target="15" data-suffix="">0</dt>
+            <dd>membri, mentori și antrenori</dd>
+          </div>
+          <div class="stat anim" style="--d: 0.66s">
+            <dt class="stat-value" data-target="9" data-suffix="+">0+</dt>
+            <dd>experți consultați pentru M.A.R.S.</dd>
+          </div>
+          <div class="stat anim" style="--d: 0.74s">
+            <dt class="stat-value" data-target="70" data-suffix="%">0%</dt>
+            <dd>componente refolosite</dd>
+          </div>
+        </dl>
+
+        <p class="drag-hint anim" style="--d: 0.9s" aria-hidden="true">Mișcă mouse-ul · click pentru val</p>
+      </section>
+
+      <!-- ================= DESPRE ================= -->
+      <section class="section" id="despre">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="label">01 — Cine suntem</span>
+            <h2 class="title">Mai mult decât o echipă de robotică</h2>
+          </header>
+
+          <div class="split">
+            <p class="lead reveal">
+              Suntem HydroMinds, o echipă inovatoare, plină de energie și cu un potențial remarcabil. Avem 3 ani de la
+              formarea echipei, dar performanțele noastre sunt impecabile.
+            </p>
+            <div class="items">
+              <div class="item reveal">
+                <h3>Istoria și performanțele</h3>
+                <p>3 ani în FIRST LEGO League, calificați în Finala Națională în fiecare an de la înființare. Anul acesta intrăm în FIRST Tech Challenge.</p>
+              </div>
+              <div class="item reveal">
+                <h3>Dincolo de robotică</h3>
+                <p>Dezvoltăm proiecte de granturi cu impact real și spunem povestea inovației prin storytelling și concursuri video.</p>
+              </div>
+              <div class="item reveal">
+                <h3>O comunitate inclusivă</h3>
+                <p>Cele mai bune idei vin din diversitate. Primim cu brațele deschise noi membri dornici să învețe, să inoveze și să crească alături de noi.</p>
+              </div>
+            </div>
+          </div>
+
+          <figure class="cutout wide reveal" data-tilt="6">
+            <img src="assets/photos/team-cutout.webp" alt="Echipa HydroMinds cu steagul Moldovei și bannerul echipei" loading="lazy" />
+          </figure>
+
+          <div class="table reveal">
+            <div class="row head"><span>Sezon FLL</span><span>Premiu</span></div>
+            <div class="row"><span>Submerged</span><span>Premiul Prieteniei</span></div>
+            <div class="row"><span>Unearthed</span><span>Proiectul de Inovare</span></div>
+            <div class="row"><span>BioGlow</span><span class="live">În desfășurare</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= REALIZĂRI ================= -->
+      <section class="section" id="realizari">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="label">02 — Realizări</span>
+            <h2 class="title">Premii, granturi și inovație</h2>
+          </header>
+
+          <div class="cols-3">
+            <div class="col reveal">
+              <h3 class="col-title">Robotică &amp; competiții FIRST</h3>
+              <ul class="list">
+                <li><strong>Sumobot 2025</strong><span>Locul II, nivel raional</span></li>
+                <li><strong>FLL Submerged</strong><span>Premiul Prieteniei &amp; calificare în semifinală</span></li>
+                <li><strong>FLL Unearthed</strong><span>Premiul pentru Proiectul de Inovație &amp; calificare în semifinală</span></li>
+                <li><strong>FLL BioGlow</strong><span>În desfășurare, pregătiți pentru noi performanțe</span></li>
+              </ul>
+            </div>
+            <div class="col reveal">
+              <h3 class="col-title">Impact &amp; inovație STEM</h3>
+              <ul class="list">
+                <li>
+                  <strong>Grantul „HydroSpace”</strong>
+                  <span>Fondatori ai primului spațiu modern și echipat de robotică &amp; relaxare pentru tineri din regiune.</span>
+                  <a class="link-arrow sm" href="https://qr.generatorqr.com/BaTtzcqH6" target="_blank" rel="noopener">Vezi proiectul</a>
+                </li>
+                <li><strong>Săptămâna Educației în Moldova</strong><span>Prezentați la Expoziția EdTech cu soluția M.A.R.S.</span></li>
+                <li>
+                  <strong>StartUp School &amp; Demo Day</strong>
+                  <span>Absolvit cu conceptul de Radar Tracking pentru camioane și colete.</span>
+                  <a class="link-arrow sm" href="https://qrto.org/3taz5F" target="_blank" rel="noopener">Proiectul „Camion Radar”</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col reveal">
+              <h3 class="col-title">Concursuri naționale &amp; Tekwill</h3>
+              <ul class="list">
+                <li><strong>Video Storytelling 2026</strong><span>Locul III</span></li>
+                <li><strong>Artificial Intelligence 2025</strong><span>Locul III</span></li>
+                <li><strong>Dezbateri &amp; Leadership</strong><span>Competiții regionale de debate și antreprenoriat</span></li>
+              </ul>
+              <figure class="cutout trophies" data-tilt="10">
+                <img src="assets/photos/trophies.webp" alt="Trofeele echipei" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROIECTE ================= -->
+      <section class="section" id="proiecte">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="label">03 — Proiecte</span>
+            <h2 class="title">Idei care rezolvă probleme reale</h2>
+          </header>
+
+          <article class="project">
+            <figure class="photo reveal" data-tilt="8">
+              <img src="assets/photos/mars.webp" alt="Macheta proiectului M.A.R.S." loading="lazy" />
+              <figcaption>FLL: Unearthed</figcaption>
+            </figure>
+            <div class="project-body reveal">
+              <h3 class="project-name">M.A.R.S.</h3>
+              <p class="project-sub">Modular Artifact Recognition Sifter</p>
+              <p>
+                Ne-am pus în rolul arheologilor, am vorbit cu peste 9 experți și am conceput un sistem mecanizat
+                inteligent, modular și autonom energetic, care procesează materialul excavat direct pe șantier, într-un
+                flux continuu și precis.
+              </p>
+              <ul class="specs">
+                <li>Bandă rulantă modulară</li>
+                <li>Sită vibratoare cu frecvență controlată</li>
+                <li>Senzori optici / spectrometrici</li>
+                <li>Clasificare asistată de AI</li>
+                <li>Mecanism automat de selecție</li>
+                <li>Panouri solare + generator auxiliar</li>
+              </ul>
+              <div class="links">
+                <a class="link-arrow" href="https://qr.generatorqr.com/BaW0yicE6" target="_blank" rel="noopener">Proiectul M.A.R.S.</a>
+                <a class="link-arrow" href="https://link.jig.space/jweCU8ZSH1b" target="_blank" rel="noopener">Prototipul în CAD 3D</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= FTC ================= -->
+      <section class="section" id="ftc">
+        <div class="container">
+          <div class="ftc">
+            <figure class="cutout robot reveal" data-tilt="14">
+              <img src="assets/photos/robot-cutout.webp" alt="Robotul FTC al echipei HydroMinds" loading="lazy" />
+            </figure>
+            <div>
+              <header class="section-head reveal">
+                <span class="label">04 — Pasul spre FTC</span>
+                <h2 class="title">De la LEGO, la metal</h2>
+              </header>
+              <p class="lead reveal">
+                După 3 ani de succese în FIRST LEGO League, am făcut pasul firesc către FIRST Tech Challenge. Tranziția
+                marchează maturizarea echipei și intrarea directă în ingineria aplicată.
+              </p>
+              <h3 class="sub-title reveal">De ce FTC e un tech startup</h3>
+              <p class="reveal muted">
+                Gestionăm un întreg model de afacere, iar toate deciziile tehnice și de management sunt notate într-un
+                Engineering Portfolio complet.
+              </p>
+              <ol class="steps-inline reveal">
+                <li>Cercetare</li>
+                <li>Prototipare CAD</li>
+                <li>Cod în Java</li>
+                <li>Bugete reale</li>
+                <li>Marketing</li>
+                <li>Granturi &amp; sponsori</li>
+                <li>Engineering Portfolio</li>
+              </ol>
+            </div>
+          </div>
+
+          <figure class="photo wide reveal" data-tilt="5">
+            <img src="assets/photos/ftc-instruire.webp" alt="Echipa la Instruirea echipelor FIRST Tech Challenge Moldova" loading="lazy" />
+            <figcaption>Instruirea echipelor FIRST Tech Challenge Moldova</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ================= OBIECTIVE ================= -->
+      <section class="section" id="obiective">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="label">05 — Obiectivele sezonului</span>
+            <h2 class="title">Doi piloni</h2>
+          </header>
+          <div class="cols-2">
+            <div class="col reveal">
+              <span class="num">01</span>
+              <h3 class="col-title">Performanță tehnică &amp; inginerie</h3>
+              <ul class="list plain">
+                <li>Proiectare CAD completă</li>
+                <li>Prototipare din aluminiu și piese printate 3D</li>
+                <li>Cod Java avansat cu algoritmi de navigare și senzori pentru perioada autonomă</li>
+                <li>Optimizarea continuă a robotului pentru meciurile oficiale</li>
+              </ul>
+            </div>
+            <div class="col reveal">
+              <span class="num">02</span>
+              <h3 class="col-title">Engineering Portfolio</h3>
+              <ul class="list plain">
+                <li>Un dosar tehnic de nivel profesionist</li>
+                <li>Întâlniri între echipe FTC</li>
+                <li>Instruirea noilor membri pe departamente: Hardware, Software, PR, Finance</li>
+                <li>Atragerea de sponsorizări și granturi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= RESURSE ================= -->
+      <section class="section" id="resurse">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="label">06 — Resurse</span>
+            <h2 class="title">Cum vor fi folosite resursele</h2>
+          </header>
+
+          <div class="budget">
+            <div class="bar-row reveal">
+              <div class="bar-top"><span>Hardware, structură &amp; kit</span><b data-target="40" data-suffix="%">0%</b></div>
+              <div class="bar"><span style="--w: 40%"></span></div>
+              <p>Kit FTC (REV Robotics / Pitsco / GoBILDA), roți Mecanum, motoare, servomotoare, rulmenți, roți dințate, modul laser pentru imprimanta 3D, stație de lipit, perete Pegboard.</p>
+            </div>
+            <div class="bar-row reveal">
+              <div class="bar-top"><span>Taxe de înregistrare &amp; logistică</span><b data-target="25" data-suffix="%">0%</b></div>
+              <div class="bar"><span style="--w: 25%"></span></div>
+              <p>Taxele campionatului național FTC Moldova și lada de transport Pit Box &amp; Freight.</p>
+            </div>
+            <div class="bar-row reveal">
+              <div class="bar-top"><span>Electronică, senzori &amp; prototipare 3D</span><b data-target="20" data-suffix="%">0%</b></div>
+              <div class="bar"><span style="--w: 20%"></span></div>
+              <p>Hub-uri REV, baterii de competiție, camere cu LIDAR, senzori de culoare, distanță și proximitate, filamente PETG, TPU, ABS.</p>
+            </div>
+            <div class="bar-row reveal">
+              <div class="bar-top"><span>Branding, marketing &amp; outreach</span><b data-target="15" data-suffix="%">0%</b></div>
+              <div class="bar"><span style="--w: 15%"></span></div>
+              <p>Logo-uri pe robot, panouri, banner, tricouri oficiale și echipament foto / video de bază.</p>
+            </div>
+          </div>
+
+          <div class="note reveal">
+            <p><strong>Investiție sustenabilă.</strong> Peste 70% din componente (aluminiu, motoare, senzori, electronică) rămân la echipă și sunt refolosite în sezoanele următoare.</p>
+            <a class="link-arrow" href="https://qrto.org/9gguQc" target="_blank" rel="noopener">Lista materialelor de care avem nevoie</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SCHIMB ================= -->
+      <section class="section" id="schimb">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="label">07 — Schimb de experiență</span>
+            <h2 class="title">Învățăm împreună</h2>
+          </header>
+          <div class="gallery">
+            <figure class="photo tall reveal" data-tilt="8">
+              <img src="assets/photos/roborangers.webp" alt="Întâlnirea cu echipa RoboRangers" loading="lazy" />
+              <figcaption>RoboRangers</figcaption>
+            </figure>
+            <figure class="photo tall reveal" data-tilt="8">
+              <img src="assets/photos/cubic-utm.webp" alt="Vizita la CUBIC.UTM" loading="lazy" />
+              <figcaption>CUBIC.UTM</figcaption>
+            </figure>
+            <figure class="photo tall reveal" data-tilt="8">
+              <img src="assets/photos/extinctor.webp" alt="Întâlnirea cu echipa Extinctor" loading="lazy" />
+              <figcaption>Extinctor</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ECHIPA ================= -->
+      <section class="section" id="echipa">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="label">08 — Echipa</span>
+            <h2 class="title">Oamenii din spatele robotului</h2>
+          </header>
+
+          <div class="filters reveal" role="group" aria-label="Filtrează echipa">
+            <button class="filter is-active" data-filter="all" type="button">Toți</button>
+            <button class="filter" data-filter="prog" type="button">Programare</button>
+            <button class="filter" data-filter="build" type="button">Construcție</button>
+            <button class="filter" data-filter="creative" type="button">Creativ</button>
+            <button class="filter" data-filter="lead" type="button">Căpitani &amp; mentori</button>
+          </div>
+
+          <div class="team">
+            <figure class="member reveal" data-tags="build creative" data-tilt="10"><div class="m-photo"><img src="assets/team/evelina-cad.webp" alt="" loading="lazy" /></div><figcaption><strong>Evelina</strong><span>CAD, Fundraising</span></figcaption></figure>
+            <figure class="member reveal" data-tags="prog lead" data-tilt="10"><div class="m-photo"><img src="assets/team/alexa.webp" alt="" loading="lazy" /></div><figcaption><strong>Alexa</strong><span>Căpitan FLL, programare</span></figcaption></figure>
+            <figure class="member reveal" data-tags="lead" data-tilt="10"><div class="m-photo"><img src="assets/team/vitalina.webp" alt="" loading="lazy" /></div><figcaption><strong>Vitalina</strong><span>Project Manager, Mentor FLL</span></figcaption></figure>
+            <figure class="member reveal" data-tags="creative" data-tilt="10"><div class="m-photo"><img src="assets/team/cipriana.webp" alt="" loading="lazy" /></div><figcaption><strong>Cipriana</strong><span>Creative designer</span></figcaption></figure>
+            <figure class="member reveal" data-tags="prog build" data-tilt="10"><div class="m-photo"><img src="assets/team/mihai.webp" alt="" loading="lazy" /></div><figcaption><strong>Mihai</strong><span>Programator, Constructor</span></figcaption></figure>
+            <figure class="member reveal" data-tags="creative" data-tilt="10"><div class="m-photo"><img src="assets/team/evelina-com.webp" alt="" loading="lazy" /></div><figcaption><strong>Evelina</strong><span>Comunicație</span></figcaption></figure>
+            <figure class="member reveal" data-tags="creative" data-tilt="10"><div class="m-photo"><img src="assets/team/ilinca.webp" alt="" loading="lazy" /></div><figcaption><strong>Ilinca</strong><span>Social media</span></figcaption></figure>
+            <figure class="member reveal" data-tags="creative" data-tilt="10"><div class="m-photo"><img src="assets/team/maria.webp" alt="" loading="lazy" /></div><figcaption><strong>Maria</strong><span>Cercetător</span></figcaption></figure>
+            <figure class="member reveal" data-tags="prog" data-tilt="10"><div class="m-photo"><img src="assets/team/aaron.webp" alt="" loading="lazy" /></div><figcaption><strong>Aaron</strong><span>Programator</span></figcaption></figure>
+            <figure class="member reveal" data-tags="build" data-tilt="10"><div class="m-photo"><img src="assets/team/teofil.webp" alt="" loading="lazy" /></div><figcaption><strong>Teofil</strong><span>Strategist de misiuni</span></figcaption></figure>
+            <figure class="member reveal" data-tags="build lead" data-tilt="10"><div class="m-photo"><img src="assets/team/dorin.webp" alt="" loading="lazy" /></div><figcaption><strong>Dorin</strong><span>Căpitan FTC, constructor</span></figcaption></figure>
+            <figure class="member reveal" data-tags="prog" data-tilt="10"><div class="m-photo"><img src="assets/team/andries.webp" alt="" loading="lazy" /></div><figcaption><strong>Andrieș</strong><span>Programator</span></figcaption></figure>
+            <figure class="member reveal" data-tags="build" data-tilt="10"><div class="m-photo"><img src="assets/team/madalin.webp" alt="" loading="lazy" /></div><figcaption><strong>Madălin</strong><span>Constructor</span></figcaption></figure>
+            <figure class="member reveal" data-tags="lead" data-tilt="10"><div class="m-photo"><img src="assets/team/marius.webp" alt="" loading="lazy" /></div><figcaption><strong>Marius</strong><span>Mentor FTC</span></figcaption></figure>
+            <figure class="member reveal" data-tags="lead" data-tilt="10"><div class="m-photo"><img src="assets/team/virginia.webp" alt="" loading="lazy" /></div><figcaption><strong>Virginia Bîzgu</strong><span>Antrenor FTC, FLL</span></figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= IMPACT ================= -->
+      <section class="section" id="impact">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="label">09 — Impact social &amp; STEM</span>
+            <h2 class="title">Inspirația pe care o dăm mai departe</h2>
+          </header>
+          <div class="split">
+            <figure class="photo reveal" data-tilt="6">
+              <img src="assets/photos/workshop.webp" alt="Atelier practic de robotică" loading="lazy" />
+            </figure>
+            <div class="items">
+              <div class="item reveal">
+                <h3>Demonstrații cu robotul</h3>
+                <p>Mergem în școli și licee și arătăm robotul în acțiune: autonomie, senzori, colectare și manipulare de elemente.</p>
+              </div>
+              <div class="item reveal">
+                <h3>Ateliere de robotică &amp; imprimare 3D</h3>
+                <p>Construcție mecanică, programare în blocuri și Java, și cum un prototip 3D devine o piesă funcțională.</p>
+              </div>
+              <div class="item reveal">
+                <h3>Women in STEM &amp; incluziune</h3>
+                <p>Demontăm stereotipul că ingineria e dificilă sau exclusivistă și încurajăm fetele și tinerii din toate mediile.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SPONSORI ================= -->
+      <section class="section" id="sponsori">
+        <div class="container">
+          <div class="split center">
+            <figure class="cutout jackets reveal" data-tilt="10">
+              <img src="assets/photos/jackets-cutout.webp" alt="Membri HydroMinds în tricourile echipei" loading="lazy" />
+              <span class="here h1">Logo-ul vostru</span>
+              <span class="here h2">aici</span>
+            </figure>
+            <div>
+              <header class="section-head reveal">
+                <span class="label">10 — Vizibilitate &amp; branding</span>
+                <h2 class="title">Logo-ul vostru poate fi aici</h2>
+              </header>
+              <div class="items">
+                <div class="item reveal">
+                  <h3>Pe robot și echipament</h3>
+                  <p>Sigla voastră pe robot, roll-up-uri, fișele de lucru ale elevilor și echipamentul echipei la fiecare vizită în școli.</p>
+                </div>
+                <div class="item reveal">
+                  <h3>Susținător al educației</h3>
+                  <p>Brandul vostru ajunge la sute de elevi, profesori și părinți.</p>
+                </div>
+                <div class="item reveal">
+                  <h3>Fizic și digital</h3>
+                  <p>Vizibilitate garantată la evenimente și pe paginile noastre și ale partenerilor.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section class="section" id="contact">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="label">11 — Contact</span>
+            <h2 class="title">Hai să construim viitorul împreună</h2>
+          </header>
+
+          <div class="split">
+            <div class="reveal">
+              <p class="lead">
+                Un parteneriat în proiectul nostru FTC înseamnă formarea directă a viitorilor ingineri, programatori și
+                lideri din tehnologie.
+              </p>
+              <dl class="contact">
+                <div><dt>Echipa</dt><dd>HydroMinds #38992</dd></div>
+                <div><dt>Persoană de contact</dt><dd>Coliba Evelina, Fundraising and Marketing</dd></div>
+                <div><dt>Telefon</dt><dd><a href="tel:+37368760351">+373 68760351</a></dd></div>
+                <div><dt>E-mail</dt><dd><a href="mailto:hydrominds12@gmail.com">hydrominds12@gmail.com</a></dd></div>
+                <div><dt>Locație</dt><dd>s. Dubăsarii Vechi, r. Criuleni</dd></div>
+              </dl>
+              <div class="hero-ctas">
+                <a class="cta" href="mailto:hydrominds12@gmail.com?subject=Parteneriat%20HydroMinds%20%2338992">Scrie-ne un e-mail</a>
+                <a class="link-arrow" href="tel:+37368760351">Sună-ne</a>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <h3 class="sub-title">Pasul următor</h3>
+              <ol class="steps">
+                <li><strong>Stabilim o întâlnire</strong><span>Fizic sau online (Google Meet / Zoom / Teams), cu o prezentare scurtă și un demo live cu robotul.</span></li>
+                <li><strong>Adaptăm beneficiile</strong><span>Vizibilitatea se potrivește obiectivelor de marketing ale companiei voastre.</span></li>
+                <li><strong>Semnăm acordul</strong><span>Formalizăm colaborarea și plasăm logo-ul vostru pe robot, echipament și toate materialele noastre.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <img src="assets/photos/logo-white.webp" alt="HydroMinds" width="96" height="78" loading="lazy" />
+      <p>HydroMinds #38992 · FIRST Tech Challenge Moldova</p>
+      <p class="muted">s. Dubăsarii Vechi, r. Criuleni · <a href="mailto:hydrominds12@gmail.com">hydrominds12@gmail.com</a></p>
+    </footer>
+
+    <script src="assets/vendor/three.min.js"></script>
+    <script src="assets/logo-points.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
